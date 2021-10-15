@@ -5,6 +5,7 @@ export default function TextUtils(props) {
   const HandleOnClick = () => {
     let newUppperText = text.toUpperCase();
     setText(newUppperText);
+    props.showAlert("Converted to Uppercase", "success")
   };
   const HandleOnChange = (eve) => {
     setText(eve.target.value);
@@ -13,19 +14,27 @@ export default function TextUtils(props) {
   const HandleOnLowecase = () => {
     let newLowerText = text.toLowerCase();
     setText(newLowerText);
+    props.showAlert("Converted to lowercase", "success")
+
   };
   const HandleOnClear = () => {
     let newLowerText = "";
     setText(newLowerText);
+    props.showAlert("Text cleared", "success")
+
   };
   const HandleOnCopy = () => {
     let newtext = document.getElementById("text-area");
     newtext.select();
     navigator.clipboard.writeText(newtext.value);
+    props.showAlert("Copied to Clipboard", "success")
+
   };
   const HandleOnExtraSpace = () => {
     let newSpacetext = text.split(/[ ]+/);
     setText(newSpacetext.join(" "));
+    props.showAlert("Removed extra spaces" , "success");
+
   };
 
   return (
