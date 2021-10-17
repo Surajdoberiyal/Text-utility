@@ -7,6 +7,7 @@ export default function TextUtils(props) {
     setText(newUppperText);
     props.showAlert("Converted to Uppercase", "success")
   };
+
   const HandleOnChange = (eve) => {
     setText(eve.target.value);
   };
@@ -34,7 +35,6 @@ export default function TextUtils(props) {
     let newSpacetext = text.split(/[ ]+/);
     setText(newSpacetext.join(" "));
     props.showAlert("Removed extra spaces" , "success");
-
   };
 
   return (
@@ -93,7 +93,7 @@ export default function TextUtils(props) {
       <div className="container"  style= {{color: props.mode==='dark' ? 'white' : 'black'}}>
         <h2>Your text summary</h2>
         <p>
-          {text.split(" ").length} words and {text.length} characters
+          {text.split(" ").filter((t) => t!=="").length} words and {text.length} characters
         </p>
         <h2>Text preview</h2>
         <p>{text}</p>
