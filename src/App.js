@@ -3,7 +3,6 @@ import TextUtils from "./Component/TextUtils";
 import React, { useState } from "react";
 import { Alert } from "./Component/Alert";
 import About from "./Component/About";
-// import React from "react";
 import {
   BrowserRouter as Router,
   Switch,
@@ -54,7 +53,7 @@ function App() {
         <Route exact path="/">
         <TextUtils
         showAlert={showAlert}
-        title="Enter your text here for easy modifying"
+        title="Try TextUtils - word counter, character counter, remove extra spaces"
         mode={mode}
       />
         </Route>

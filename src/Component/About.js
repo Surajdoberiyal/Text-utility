@@ -6,12 +6,12 @@ export default function About(props) {
   };
 
   let itemStyle = {
-    backgroundColor: props.mode === "dark" ? "#0B0B45" : "white",
+    backgroundColor: props.mode === "dark" ? "#173b71" : "white",
     color: props.mode === "dark" ? "white" : "black",
   };
   let accordionBtn = {
-    backgroundColor: props.mode === "dark" ? "#0B0B45" : "white",
-    color: props.mode === "dark" ? "khaki" : "black",
+    backgroundColor: props.mode === "dark" ? "#173b71" : "white",
+    color: props.mode === "dark" ? "white" : "black",
     border: props.mode === "dark" ? " 1px solid white" : "black",
   };
 
@@ -25,9 +25,9 @@ let headingTxt= {
   return (
     <>
       <div className="container">
-        <h2 className="my-5" style={headingTxt}>
+        <h1 className="my-5" style={headingTxt}>
           About-us
-        </h2>
+        </h1>
         <div className="accordion mt-5">
           <div className="accordion-item" style={itemStyle}>
             <h2 className="accordion-header">
