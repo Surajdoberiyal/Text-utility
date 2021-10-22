@@ -1,6 +1,6 @@
 import Navbar from "./Component/Navbar";
 import TextUtils from "./Component/TextUtils";
-import React, { useState } from "react";
+import React, { useState} from "react";
 import { Alert } from "./Component/Alert";
 import About from "./Component/About";
 import {
@@ -47,16 +47,17 @@ function App() {
       />
       <Alert alert={alert} />
       <Switch>
-        <Route exact path="/about">
-        <About mode={mode} />
-        </Route>
         <Route exact path="/">
         <TextUtils
         showAlert={showAlert}
         title="Try TextUtils - word counter, character counter, remove extra spaces"
         mode={mode}
       />
+        </Route>    
+        <Route exact path="/about">
+        <About mode={mode} />
         </Route>
+        
       </Switch>
       </Router>
     </>
